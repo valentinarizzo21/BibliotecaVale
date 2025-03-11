@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BibliotecaValeContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BibliotecaValeDb")));
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddScoped<LibroService>();
 var app = builder.Build();
 
 // Configura la pipeline delle richieste HTTP.

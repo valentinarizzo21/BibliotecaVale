@@ -1,0 +1,21 @@
+﻿@model Libro
+
+<h2>Modifica Libro</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <label>Titolo:</label>
+    <input asp-for="Titolo" class="form-control" required />
+
+    <label>Autore:</label>
+    <input asp-for="Autore" class="form-control" required />
+
+    <label>Genere:</label>
+    <input asp-for="Genere" class="form-control" />
+
+    <label>Disponibile:</label>
+    <input asp-for="Disponibile" type="checkbox" />
+
+    <button type="submit" class="btn btn-success">Salva</button>
+</form>

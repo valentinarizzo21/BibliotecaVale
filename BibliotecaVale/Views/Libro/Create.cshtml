@@ -1,0 +1,19 @@
+﻿@model Libro
+
+<h2>Aggiungi un nuovo libro</h2>
+
+<form asp-action="Create" method="post">
+    <label>Titolo:</label>
+    <input asp-for="Titolo" class="form-control" required />
+
+    <label>Autore:</label>
+    <input asp-for="Autore" class="form-control" required />
+
+    <label>Genere:</label>
+    <input asp-for="Genere" class="form-control" />
+
+    <label>Disponibile:</label>
+    <input asp-for="Disponibile" type="checkbox" />
+
+    <button type="submit" class="btn btn-success">Salva</button>
+</form>
